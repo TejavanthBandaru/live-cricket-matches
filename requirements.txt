@@ -1,0 +1,9 @@
+# Core dependencies
+flask==3.0.3
+beautifulsoup4==4.12.3
+selenium==4.21.0
+webdriver-manager==4.0.1
+
+# Additional utilities
+requests==2.32.3
+lxml==5.2.1
