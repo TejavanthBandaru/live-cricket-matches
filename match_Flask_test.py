@@ -48,7 +48,7 @@ def get_live_scores():
             matches.append({
                 "match_time": match_time,
                 "match_url": match_url,
-                "team_1": team_1",
+                "team_1": team_1,
                 "team_1_score": team_1_score,
                 "team_2": team_2,
                 "team_2_score": team_2_score
