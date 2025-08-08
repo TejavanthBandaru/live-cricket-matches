@@ -55,7 +55,7 @@ def get_live_scores():
                 "team_1": team_1,
                 "team_1_score": team_1_score,
                 "team_2": team_2,
-                "team_2_score": team_2_score
+                "team_2_score": team_2_score,
                 "match_status": match_status,
             })
         
@@ -79,4 +79,5 @@ def get_live_scores():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
+
 
