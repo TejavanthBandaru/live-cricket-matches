@@ -27,6 +27,10 @@ def get_live_scores():
             match_containers = soup.find_all('div', class_="cb-col cb-col-100 cb-tms-itm")
         
         for match in match_containers:
+            try:
+                match_status = match.find('div', class_="cb-text-live").text
+            except:
+                match_status = ''
             team_names = match.find_all('div', class_="cb-ovr-flo cb-hmscg-tm-nm")
             team_1 = team_names[0].text.strip() if len(team_names) > 0 else 'TBD'
             team_2 = team_names[1].text.strip() if len(team_names) > 1 else 'TBD'
@@ -52,6 +56,7 @@ def get_live_scores():
                 "team_1_score": team_1_score,
                 "team_2": team_2,
                 "team_2_score": team_2_score
+                "match_status": match_status,
             })
         
         return jsonify({
@@ -74,3 +79,4 @@ def get_live_scores():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
+
